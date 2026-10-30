@@ -59,7 +59,7 @@ public class PlaybackController implements PlaybackControllerNotifiable {
     private final static long PROGRESS_REPORTING_INTERVAL = TimeUtils.secondsToMillis(3);
     // Frequency to report paused state
     private static final long PROGRESS_REPORTING_PAUSE_INTERVAL = TimeUtils.secondsToMillis(15);
-    private static final int[] SMART_SKIP_STEPS = { 5_000, 30_000, 60_000, 300_000, 900_000 };
+    private static final int[] SMART_SKIP_STEPS = { 5_000, 10_000, 30_000, 60_000, 300_000, 600_000, 1_800_000 };
 
     private Lazy<PlaybackManager> playbackManager = inject(PlaybackManager.class);
     private Lazy<UserPreferences> userPreferences = inject(UserPreferences.class);
